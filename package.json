@@ -1,0 +1,34 @@
+{
+  "name": "top-chef",
+  "version": "1.0.0",
+  "description": "> Eat well and cheaper than usually",
+  "main": "server-client.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
+    "michelin": "0.0.0",
+    "mongoose": "^5.0.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "tinyreq": "^3.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ossama95/top-chef.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ossama95/top-chef/issues"
+  },
+  "homepage": "https://github.com/ossama95/top-chef#readme"
+}
