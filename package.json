@@ -9,10 +9,14 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
+    "line-by-line": "^0.1.6",
     "michelin": "0.0.0",
     "mongoose": "^5.0.2",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
+    "sleep": "^5.1.1",
+    "string-similarity": "^1.2.0",
+    "sync-request": "^5.0.0",
     "tinyreq": "^3.3.1"
   },
   "devDependencies": {
