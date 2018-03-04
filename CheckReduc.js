@@ -2,6 +2,9 @@
 var request = require("request");
 var cheerio = require("cheerio");
 var fs = require('fs');
+fs.appendFileSync("./my-app/src/reduc.json","[" , null, 'utf8', (err) => {
+
+});
 
 var lines = require('fs').readFileSync('linkfourchette.txt', 'utf-8')
     .split('\n')
@@ -10,16 +13,14 @@ var lines = require('fs').readFileSync('linkfourchette.txt', 'utf-8')
 
 lines.forEach(function(line)
 {
+  check(line);
 
 });
 
 function check(line)
 {
 
-
-    request({
-      uri: line,
-    },function(error, response, body) {
+    request({  uri: line,  },function(error, response, body) {
 try{
 
     var $ = cheerio.load(body);
@@ -30,7 +31,7 @@ try{
     restaurant.promo =  $(".saleType--specialOffer").find(".saleType-title").text().trim();
     if(restaurant.promo != "" || restaurant.event != "")
     {
-      fs.appendFileSync("./reduc.json", JSON.stringify(restaurant) +"\r\n", null, 'utf8', (err) => {
+      fs.appendFileSync("./my-app/src/reduc.json", JSON.stringify(restaurant) +", \r\n", null, 'utf8', (err) => {
 
     });
     }
@@ -44,3 +45,7 @@ try{
 });
 
 }
+
+fs.appendFileSync("./my-app/src/reduc.json","]" , null, 'utf8', (err) => {
+
+});

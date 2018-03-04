@@ -30,7 +30,7 @@ var a = await getlink(line);
       //console.log(stringSimilarity.compareTwoStrings(restaurant.name,res));
       if(res.includes(restaurant.name) || restaurant.name.includes(res) || stringSimilarity.compareTwoStrings(restaurant.name,res) > 0.40)
       {
-        var adress =  $(this).find(".resultItem-address").text()
+        var adress =  $(this).find(".resultItem-address").text();
         if(adress.includes(restaurant.postalcode))
         {
           var link =  $(this).find(".resultItem-name > a").attr("href");
